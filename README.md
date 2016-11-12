@@ -2,7 +2,7 @@ OnTask_IpProject
 
 By:
 Jonathan Jordan
-Rachel Synder
+Rachel Synder (YUP)
 Jonathan Ebert
 Drew Ollice
 Daniel Banks
