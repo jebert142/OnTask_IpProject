@@ -1,8 +1,8 @@
 OnTask_IpProject
 
 By:
-Jonathan Jordan (Awww Yea)
-Rachel Synder (YUP)
+Jonathan Jordan
+Rachel Synder
 Jonathan Ebert
 Drew Ollice
 Daniel Banks
