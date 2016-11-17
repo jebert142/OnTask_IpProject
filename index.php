@@ -17,7 +17,7 @@
     <link href="Styles/yeti_bootswatch.css" rel="stylesheet">
     
     <!--For a Tab Icon-->
-    <link rel="icon" href="../../favicon.ico">
+    <link rel="icon" href="Styles/favicon.ico">
   </head>
 
   <body>
