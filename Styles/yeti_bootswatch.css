@@ -1270,6 +1270,9 @@ h1,
 .h1 {
   font-size: 39px;
 }
+.h1-specialLarge{
+  font-size: 60px;
+}
 h2,
 .h2 {
   font-size: 32px;

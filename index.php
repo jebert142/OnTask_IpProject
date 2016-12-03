@@ -26,9 +26,15 @@
   </head>
 
   <body>
-
+    
     <div class="container">
+      <!--title-->
+      <div class="center-block">
+        <h1 class="text-center h1-specialLarge">Welcome to OnTask!</h1>
+        <br/>
+      </div>
 
+      <!--Sign-In form-->
       <form class="form-signin">
         <h2 class="form-signin-heading">Please sign in</h2>
         <label for="inputEmail" class="sr-only">Email address</label>
