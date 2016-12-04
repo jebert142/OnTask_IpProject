@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <title>OnTask</title>
+
+    <!-- Bootstrap Link-->
+    <link href="Styles/yeti_bootswatch.css" rel="stylesheet">
+    
+    <!--For a Tab Icon-->
+    <link rel="icon" href="Styles/favicon.ico">
+  <script>
+  $( function() {
+    $( "#startDate" ).datepicker();
+    $( "#endDate" ).datepicker();
+  } );
+  </script>
+</head>
+<body>
+<form action="createTaskProcess.php" method='post'>
+<div class="container">	
+	<div class="row">
+		<div class='col-sm-6'>
+			<div class="form-group">
+				<input type='text' class="form-control" name='title'></td>
+			</div>
+		</div>
+	</div>
+</div>
+	<br>
+	<select name="difficulty" id="difficulty">
+	<option> - Difficulty - </option>
+	<option> 1 </option>
+	<option> 2 </option>
+	<option> 3 </option>
+	<option> 4 </option>
+	<option> 5 </option>
+	</select>
+	<br>
+<div class="container">
+    <div class="row">
+        <div class='col-sm-6'>
+            <div class="form-group">
+                
+                    <span class="input-group-addon">
+                    	<input type="text" id="endDate">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+               
+            </div>
+        </div>
+	<br>
+	<div class="container">
+    <div class="row">
+        <div class='col-sm-6'>
+            <div class="form-group">
+                
+                    <span class="input-group-addon">
+                    	<input type="text" id="startDate">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                
+            </div>
+        </div>
+	<br>
+<input type="submit" value="Create" name="Create">
+<input type="submit" value="Discard" name="Discard">
+</form>
+</body>
+</html>
