@@ -25,17 +25,19 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar collapse" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only"><a href="yourSchedule/tasksHome.php">Tasks</a></span>
+            <span class="icon-bar"><a href="yourAccount/yourAccounthome.php">Account</a></span>
           </button>
-          <a class="navbar-brand" href="#">OnTask</a>
+          <a class="navbar-brand" href="home.php">OnTask</a>
         </div>
+
         <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="yourSchedule/tasksHome.php">Tasks<span class="sr-only">(current)</span></a></li>
+        </ul>
           <form class="navbar-form navbar-right">
-            <button role="button" class="btn btn-success" href="../home.php">Sign Out</button>
+            <button role="button" class="btn btn-success" href="index.php">Sign Out</button>
           </form>
         </div><!--/.navbar-collapse -->
       </div>
@@ -51,23 +53,10 @@
     </div>
 
     <div class="container">
-      <!-- Example row of columns -->
+      
       <div class="row">
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-       </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
+      
+        
       </div>
 
       <hr>
