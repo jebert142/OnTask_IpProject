@@ -1,0 +1,16 @@
+<?php
+		$title = $_POST['title'];
+		$difficulty = $_POST['difficulty'];
+		$end = $_POST['endDate'];
+		$start = $_POST['startDate'];
+
+		$mysql_access = mysql_connect(localhost, 'group4', '');
+	
+		if(!$mysql_access)
+		{
+			die('Could not connect: ' . mysql_error());
+		}
+
+		mysql_select_db('group4');
+		
+?>
