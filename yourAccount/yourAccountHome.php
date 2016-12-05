@@ -1,3 +1,5 @@
+<!--Made by Jonathan Ebert-->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,46 +27,46 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar collapse" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only"><a href="yourSchedule/tasksHome.php">Tasks</a></span>
-            <span class="icon-bar"><a href="yourAccount/yourAccounthome.php">Account</a></span>
-          </button>
           <a class="navbar-brand" href="../home.php">OnTask</a>
         </div>
 
         <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <li><a href="../yourSchedule/tasksHome.php">Tasks<span class="sr-only">(current)</span></li>
+          <li><a href="../yourSchedule/tasksHome.php">Tasks</a></li>
         </ul>
-          <form class="navbar-form navbar-right">
-            <button role="button" class="btn btn-success" href="../index.php">Sign Out</button>
-          </form>
-        </div><!--/.navbar-collapse -->
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="../yourAccount/yourAccountHome.php"><?php echo $username?>'s Account</a></li>
+            <li><a href="../index.php">Log Out</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
 
-    <div class="container">
-      
-      <div class="row">
-        <div class="col-md-6">
-          <p>some text</p>
-        </div>
+<!--header container-->
+    <div class="jumbotron">
+      <div class="container">
+        <h1  style="text-decoration:none">Your Account</h1>
+        <p  style="text-decoration:none">View and change your account information here</p>
       </div>
+    </div>
+
+    <!--main body-->
+    <div class="container">
+    	<div class="row">
+    		<div class="col-md-12"></div>
+    	</div>
+    </div>
+
+    <div class="container">
     <hr>
 
       <footer>
-        <p>&copy; 2016 OnTask</p>
+        <p><a href="../aboutUs.php">&copy; 2016 OnTask</a></p>
       </footer>
     </div>
 
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-
-
   </body>
-
 </html>

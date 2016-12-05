@@ -1,4 +1,3 @@
-<!--the current php code turns the user back to index even with the right credentials-->
 <!--Made by Jonathan Ebert-->
 
 <!DOCTYPE html>
@@ -32,47 +31,78 @@
         <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
           <li><a href="yourSchedule/tasksHome.php">Tasks</a></li>
+          <li><a href="yourAccount/yourAccountHome.php">Account</a></li>
         </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="yourAccount/yourAccountHome.php"><?php echo $username?>'s Account</a></li>
-            <li><a href="../index.php">Log Out</a></li>
+            <li><a href="index.php">Log Out</a></li>
           </ul>
-        </div>
+        </div><!--/.navbar-collapse -->
       </div>
     </nav>
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <!--header container-->
     <div class="jumbotron">
       <div class="container">
-        <h1 style="text-decoration:none">Welcome To OnTask!</h1>
-        <p style="text-decoration:none">We are a new company focusing on providing a fun and awarding way to tracking your day-to-day tasks. If you'd like to learn more about who we are, click the button below.</p>
-        <p><a class="btn btn-primary btn-lg" href="aboutUs.php" role="button">About Us &raquo;</a></p>
+        <h1  style="text-decoration:none">About Us</h1>
+        <p  style="text-decoration:none">Here's what you need to know about us.</p>
       </div>
     </div>
 
-    <!--info message for users-->
+    <!-- Main body display div -->
     <div class="container">
-      <div class="col-md-6">
-        <div class="alert alert-dismissible alert-warning">
-          <strong>Heads up!</strong> This site is under continuous improvement, please stay tuned for updates.
+
+    <!--row with names and pictures-->
+      <div class="row">
+        <!--body div here with team members involved-->
+        <div class="col-md-4">
+          <h2>Rachel Snyder</h4>
+          <p>Senior at UNF: Studying Computer Science</p>
+          <p>Founder of OnTask</p>
+          <img src="RachelSnyder_pic.jpg" alt="Rachel Snyder" style="width:156px;height:300px;">
+        </div>
+        <div class="col-md-4">
+          <h2>Jonathan Ebert</h4>
+          <p>Senior at UNF: Studying Information Systems</p>
+          <p>Founder of OnTask</p>
+          <img src="Jon_Profile1.png" alt="Jonathan Ebert" style="width:300px;height:300px;">
         </div>
       </div>
+<br/>
+<br/>
+    <!--references row-->
+        <div class="row">
+        <!--reference #1-->
+          <div class="well well-lg">
+            <h1>References</h1>
+            <p><b>Bootswatch theme for Bootstrap</b>: <a href="https://bootswatch.com/">https://bootswatch.com/</a></p>
+            <br/>
+          </div>
+          <!--reference #2
+          <div class="col-md-4">
+            <h1>References</h1>
+            <p><b>Bootswatch theme for Bootstrap</b> <a href="https://bootswatch.com/">https://bootswatch.com/</a></p>
+            <br/>
+          </div>-->
+        </div>
     </div>
 
-  <!--footer-->
     <div class="container">
+      
+      <div class="row">
+      <br/>
+      </div>
+
       <hr>
 
       <footer>
         <p><a href="aboutUs.php">&copy; 2016 OnTask</a></p>
       </footer>
-    </div>
+    </div> <!-- /container -->
 
 
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-
   </body>
-
 </html>
