@@ -52,7 +52,10 @@
     <div class="jumbotron">
       <div class="container">
         <h1  style="text-decoration:none">Your Tasks</h1>
-        <p  style="text-decoration:none">Below, you'll find your current tasks this month and your upcoming tasks on those tiles to the right</p>
+        <p  style="text-decoration:none">Below, you'll find your current tasks this month and your upcoming tasks on those tiles to the right</p>.
+        <!--buttons for create and modify tasks-->
+        <p><a class="btn btn-success" href="../createTask.php" role="button">Create Task &raquo;</a>
+        <a class="btn btn-primary" href="../modifyTask.php" role="button">Modify Task &raquo;</a></p>
       </div>
     </div>
 

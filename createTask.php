@@ -1,9 +1,9 @@
-<?php
+<!--php
   session_start();
   if($_SESSION['username'] == ""){
     header("Location: index.php?You must login!");
   }
-?>
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,28 +26,33 @@
   </script>
 </head>
 <body>
-<!-- HEADER -->
-  <nav class="navbar navbar-inverse navbar-fixed-top">
+<!-- top navigation bar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">OnTask</a>
+          <a class="navbar-brand" href="home.php">OnTask</a>
         </div>
+
         <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right">
-            <button role="button" class="btn btn-success" href="../home.php">Sign Out</button>
-          </form>
-        </div><!--/.navbar-collapse -->
+        <ul class="nav navbar-nav">
+          <li><a href="yourSchedule/tasksHome.php">Tasks</a></li>
+        </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="yourAccount/yourAccountHome.php"><?php echo $username?>'s Account</a></li>
+            <li><a href="../index.php" class="btn btn-success" style="padding-top: 11px;padding-bottom: 11px;">Sign Out</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
-<br>
-<br>
-<br>
+
+<!--main jumbotron-->
+    <div class="jumbotron">
+      <div class="container">
+        <h1 style="text-decoration:none">Create Task</h1>
+        <p style="text-decoration:none">Create a new task below</p>
+      </div>
+    </div>
+
 <!-- FORM -->
 <form class="form-horizontal" action="createTaskProcess.php" method='post'>
   <fieldset>
