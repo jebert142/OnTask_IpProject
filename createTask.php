@@ -56,7 +56,7 @@
 <!-- FORM -->
 <form class="form-horizontal" action="createTaskProcess.php" method='post'>
   <fieldset>
-    <legend>Create Task</legend>
+    <legend></legend>
     <!--Title-->
     <div class="form-group">
       <label for="inputTitle" class="col-lg-2 control-label">Title</label>
@@ -102,5 +102,13 @@
     </div>
   </fieldset>
 </form>
+  <!--footer-->
+    <div class="container">
+      <hr>
+
+      <footer>
+        <p><a href="aboutUs.php">&copy; 2016 OnTask</a></p>
+      </footer>
+    </div>
 </body>
 </html>

@@ -2,7 +2,7 @@
   
   session_start();
   if($_SESSION['username'] == ""){
-    header("Location: index.php?You must login!");
+    header("Location: index.php");
   }
 
   //Going to call the database to display item based on id given
@@ -51,7 +51,6 @@
   <script>
   $( function() {
     $( "#startDate" ).datepicker();
-    $( "#endDate" ).datepicker();
   } );
   </script>
 </head>
@@ -89,7 +88,7 @@
     <div class="col-md-8">
       <form class="form-horizontal" action="modifyTaskProcess.php" method='post'>
         <fieldset>
-          <legend>Create Task</legend>
+          <legend></legend>
           <!--Title-->
           <div class="form-group">
             <label for="inputTitle" class="col-lg-2 control-label">Title</label>
@@ -106,12 +105,13 @@
             </div>
           </div>
           <!-- Start Date-->
-          <div class="form-group">
-            <label for="startDate" class="col-lg-2 control-label">Due Date</label>
-            <div class="col-md-6">
-              <input type="text" class="form-control" id="startDate" placeholder="<?php echo $start; ?>">
-            </div>
-          </div>
+          <!-- Start Date-->
+    <div class="form-group">
+      <label for="startDate" class="col-lg-2 control-label">Due Date</label>
+      <div class="col-md-6">
+        <input type="text" class="form-control" id="startDate" placeholder="Due Date">
+      </div>
+    </div>
           <!--Difficuty-->
           <div class="form-group">
             <label for="select" class="col-lg-2 control-label">Difficulty</label>
@@ -148,9 +148,9 @@
       </footer>
     </div>
 
-  <!-- Placed at the end of the document so the pages load faster -->
+  <!-- Placed at the end of the document so the pages load faster 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-
+-->
 </body>
 </html>
