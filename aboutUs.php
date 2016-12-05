@@ -35,7 +35,7 @@
         </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="yourAccount/yourAccountHome.php"><?php echo $username?>'s Account</a></li>
-            <li><a href="index.php">Log Out</a></li>
+            <li><a href="../index.php" class="btn btn-success" style="padding-top: 11px;padding-bottom: 11px;">Sign Out</a></li>
           </ul>
         </div><!--/.navbar-collapse -->
       </div>
@@ -84,9 +84,13 @@
               <!--reference #2-->
               <p><b>JQuery</b>: <a href="http://jquery.com/">http://jquery.com/</a></p>
               <br/>
-              
+
               <!--reference #3-->
               <p><b>Moment.js</b>: <a href="http://momentjs.com/">http://momentjs.com/</a></p>
+              <br/>
+              
+              <!--reference #4-->
+              <p><b>CLNDR Plug-In</b>: <a href="http://kylestetz.github.io/CLNDR/">http://kylestetz.github.io/CLNDR/</a></p>
               <br/>
             </div>            
           </div>

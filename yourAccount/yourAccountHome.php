@@ -36,7 +36,7 @@
         </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="../yourAccount/yourAccountHome.php"><?php echo $username?>'s Account</a></li>
-            <li><a href="../index.php">Log Out</a></li>
+            <li><a href="../index.php" class="btn btn-success" style="padding-top: 11px;padding-bottom: 11px;">Sign Out</a></li>
           </ul>
         </div>
       </div>
@@ -51,10 +51,12 @@
     </div>
 
     <div class="container">
-    	<div class="col-md-5">
-    	<!--warning message because this page doesn't work yet-->
-			<div class="alert alert-dismissible alert-danger">
-			  <strong>Oh snap!</strong> It looks like this form doesn't work yet. Hang on tight and we'll get that fixed.
+    	<div class="row">
+	    	<div class="col-md-5">
+	    	<!--warning message because this page doesn't work yet-->
+				<div class="alert alert-dismissible alert-danger">
+				  <strong>Oh snap!</strong> It looks like this form doesn't work yet. Hang on tight and we'll get that fixed.
+				</div>
 			</div>
 		</div>
 	</div>

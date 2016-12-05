@@ -40,7 +40,7 @@
         </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="../yourAccount/yourAccountHome.php"><?php echo $username?>'s Account</a></li>
-            <li><a href="../index.php">Log Out</a></li>
+            <li><a href="../index.php" class="btn btn-success" style="padding-top: 11px;padding-bottom: 11px;">Sign Out</a></li>
           </ul>
         </div>
       </div>
@@ -58,21 +58,88 @@
     <div class="container">
       <div class="row">
         <!--calendar plugin-->
-        <div class="col-md-8">
-          
+        <div class="col-md-10">
+            <div class="clndr-controls">
+                <div class="clndr-previous-button">&lsaquo;</div>
+                <div class="month"><%= month %></div>
+                <div class="clndr-next-button">&rsaquo;</div>
+            </div>
+            <div class="clndr-grid">
+                <div class="days-of-the-week">
+                <% _.each(daysOfTheWeek, function (day) { %>
+                    <div class="header-day"><%= day %></div>
+                <% }); %>
+                    <div class="days">
+                    <% _.each(days, function (day) { %>
+                        <div class="<%= day.classes %>"><%= day.day %></div>
+                    <% }); %>
+                    </div>
+                </div>
+            </div>
         </div>
+      </div>
+      <br/>
 
-        <!--tile column-->
-        <div class="col-md-4">
-        
+        <!--tile row-->
+      <div class="row">
+        <div class="col-md-12">
+          <!--panel #1-->
+          <div class="col-sm-3">
+            <div class="panel panel-warning">
+              <div class="panel-heading">
+                <h3 class="panel-title"><strong>1. Do Homework</strong></h3>
+              </div>
+              <div class="panel-body">
+                Do HW for Internet Programming!
+              </div>
+            </div>
+          </div>
+
+          <!--panel #2-->
+          <div class="col-sm-3">
+            <div class="panel panel-warning">
+              <div class="panel-heading">
+                <h3 class="panel-title"><strong>2. Finish Stat Presentation Prep</strong></h3>
+              </div>
+              <div class="panel-body">
+                Complete and review the project presentation for Statistics.
+              </div>
+            </div>
+          </div>
+
+          <!--panel #3-->
+          <div class="col-sm-3">
+            <div class="panel panel-warning">
+              <div class="panel-heading">
+                <h3 class="panel-title"><strong>3. Do Laundry</strong></h3>
+              </div>
+              <div class="panel-body">
+                Bring it to Mom's house! :-P
+              </div>
+            </div>
+          </div>
+
+          <!--panel #4-->
+          <div class="col-sm-3">
+            <div class="panel panel-warning">
+              <div class="panel-heading">
+                <h3 class="panel-title"><strong>4. Study for Comp Sci Test</strong></h3>
+              </div>
+              <div class="panel-body">
+                Computer Science test on Thursday Dec. 8. @ 2:00 PM.
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
 
     <!--progress bar-->
     <div class="container">
+    <br/>
       <div class="row">
-        <div class="progress progress-striped col-lg-7">
-          <div class="progress-bar progress-bar-warning" style="width: 60%"></div>
+      <h2>This Week's Progress</h2>
+        <div class="progress progress-striped col-lg-12">
+          <div class="progress-bar progress-bar-success" style="width: 60%"></div>
         </div>
       </div>
     </div>
