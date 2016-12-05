@@ -1,4 +1,4 @@
-<?php
+<!--php
   
   session_start();
   if($_SESSION['username'] == ""){
@@ -33,7 +33,7 @@
 
   mysql_close($mysql_access);
 
-?>
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,76 +56,101 @@
   </script>
 </head>
 <body>
-<!-- HEADER -->
-  <nav class="navbar navbar-inverse navbar-fixed-top">
+<!-- top navigation bar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">OnTask</a>
+          <a class="navbar-brand" href="home.php">OnTask</a>
         </div>
+
         <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right">
-            <button role="button" class="btn btn-success" href="../home.php">Sign Out</button>
-          </form>
-        </div><!--/.navbar-collapse -->
+        <ul class="nav navbar-nav">
+          <li><a href="yourSchedule/tasksHome.php">Tasks</a></li>
+        </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="yourAccount/yourAccountHome.php"><?php echo $username?>'s Account</a></li>
+            <li><a href="../index.php" class="btn btn-success" style="padding-top: 11px;padding-bottom: 11px;">Sign Out</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
-<br>
-<br>
-<br>
+
+<!--main jumbotron-->
+    <div class="jumbotron">
+      <div class="container">
+        <h1 style="text-decoration:none">Modify Task</h1>
+        <p style="text-decoration:none">Modify the task you have selected below</p>
+      </div>
+    </div>
+
 <!-- FORM -->
-<form class="form-horizontal" action="modifyTaskProcess.php" method='post'>
-  <fieldset>
-    <legend>Create Task</legend>
-    <!--Title-->
-    <div class="form-group">
-      <label for="inputTitle" class="col-lg-2 control-label">Title</label>
-      <div class="col-md-6">
-        <input type="text" class="form-control" id="inputTitle"> <?php echo $title; ?>
+<div class="contianer">
+  <div class="row">
+    <div class="col-md-8">
+      <form class="form-horizontal" action="modifyTaskProcess.php" method='post'>
+        <fieldset>
+          <legend>Create Task</legend>
+          <!--Title-->
+          <div class="form-group">
+            <label for="inputTitle" class="col-lg-2 control-label">Title</label>
+            <div class="col-md-6">
+              <input type="text" class="form-control" id="inputTitle"> <?php echo $title; ?>
+            </div>
+          </div>
+          <!--Description-->
+          <div class="form-group">
+            <label for="descrip" class="col-lg-2 control-label">Description</label>
+            <div class="col-md-6">
+              <textarea class="form-control" rows="3" id="descrip"><?php echo $descrip; ?></textarea>
+              <span class="help-block">Enter details about your task here.</span>
+            </div>
+          </div>
+          <!-- Start Date-->
+          <div class="form-group">
+            <label for="startDate" class="col-lg-2 control-label">Due Date</label>
+            <div class="col-md-6">
+              <input type="text" class="form-control" id="startDate" placeholder="<?php echo $start; ?>">
+            </div>
+          </div>
+          <!--Difficuty-->
+          <div class="form-group">
+            <label for="select" class="col-lg-2 control-label">Difficulty</label>
+            <div class="col-md-6">
+              <select class="form-control" id="difficulty">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+              <br>
+            </div>
+          </div>
+          <!--Buttons-->
+          <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+              <button type="reset" class="btn btn-default">Cancel</button>
+              <button type="submit" class="btn btn-primary">Create</button>
+            </div>
+          </div>
+        </fieldset>
       </div>
     </div>
-    <!--Description-->
-    <div class="form-group">
-      <label for="descrip" class="col-lg-2 control-label">Description</label>
-      <div class="col-md-6">
-        <textarea class="form-control" rows="3" id="descrip"><?php echo $descrip; ?></textarea>
-        <span class="help-block">Enter details about your task here.</span>
-      </div>
+  </div>
+
+  <!--footer-->
+    <div class="container">
+      <hr>
+
+      <footer>
+        <p><a href="aboutUs.php">&copy; 2016 OnTask</a></p>
+      </footer>
     </div>
-    <!-- Start Date-->
-    <div class="form-group">
-      <label for="startDate" class="col-lg-2 control-label">Due Date</label>
-      <div class="col-md-6">
-        <input type="text" class="form-control" id="startDate" placeholder="<?php echo $start; ?>">
-      </div>
-    </div>
-    <!--Difficuty-->
-    <div class="form-group">
-      <label for="select" class="col-lg-2 control-label">Difficulty</label>
-      <div class="col-md-6">
-        <select class="form-control" id="difficulty">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
-        <br>
-      </div>
-    </div>
-    <!--Buttons-->
-    <div class="form-group">
-      <div class="col-lg-10 col-lg-offset-2">
-        <button type="reset" class="btn btn-default">Cancel</button>
-        <button type="submit" class="btn btn-primary">Create</button>
-      </div>
-    </div>
-  </fieldset>
+
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
 </form>
 </body>
 </html>
