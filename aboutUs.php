@@ -72,18 +72,24 @@
 <br/>
     <!--references row-->
         <div class="row">
-        <!--reference #1-->
-          <div class="well well-lg">
-            <h1>References</h1>
-            <p><b>Bootswatch theme for Bootstrap</b>: <a href="https://bootswatch.com/">https://bootswatch.com/</a></p>
-            <br/>
+          <div class="well well-lg">            
+          
+            <div>
+              <h1>References</h1>
+
+              <!--reference #1-->
+              <p><b>Bootswatch theme for Bootstrap</b>: <a href="https://bootswatch.com/">https://bootswatch.com/</a></p>
+              <br/>
+
+              <!--reference #2-->
+              <p><b>JQuery</b>: <a href="http://jquery.com/">http://jquery.com/</a></p>
+              <br/>
+              
+              <!--reference #3-->
+              <p><b>Moment.js</b>: <a href="http://momentjs.com/">http://momentjs.com/</a></p>
+              <br/>
+            </div>            
           </div>
-          <!--reference #2
-          <div class="col-md-4">
-            <h1>References</h1>
-            <p><b>Bootswatch theme for Bootstrap</b> <a href="https://bootswatch.com/">https://bootswatch.com/</a></p>
-            <br/>
-          </div>-->
         </div>
     </div>
 

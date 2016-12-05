@@ -13,6 +13,15 @@
     <!-- Bootstrap Link-->
     <link href="../Styles/yeti_bootswatch.css" rel="stylesheet" type="text/css">
 
+    <!--Moment.js-->
+    <script type="text/javascript" src="../Resources/moment.js"></script>
+
+    <!--JQuery-->
+    <script type="text/javascript" src="../Resources/jquery-3.1.1.slim.min.js"></script>
+
+    <!--CLNDR-->
+    <script type="text/javascript" src="../Resources/clndr.min.js"></script>
+
     <!--For a Tab Icon-->
     <link rel="icon" href="../Styles/favicon.ico">
   </head>

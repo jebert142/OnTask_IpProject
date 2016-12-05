@@ -54,7 +54,7 @@
     <div class="container">
       <div class="col-md-6">
         <div class="alert alert-dismissible alert-warning">
-          <strong>Heads up!</strong> This site is under continuous improvement, please stay tuned for updates.
+          <strong>Heads up!</strong> This site is undergoing continuous improvement, please stay tuned for updates.
         </div>
       </div>
     </div>
