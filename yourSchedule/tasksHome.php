@@ -38,8 +38,10 @@
         <ul class="nav navbar-nav">
           <li><a href="../yourSchedule/tasksHome.php">Tasks</a></li>
         </ul>
+
           <ul class="nav navbar-nav navbar-right">
             <li><a href="../yourAccount/yourAccountHome.php"><?php echo $username?>'s Account</a></li>
+
             <li><a href="../index.php" class="btn btn-success" style="padding-top: 11px;padding-bottom: 11px;">Sign Out</a></li>
           </ul>
         </div>
@@ -56,6 +58,7 @@
 
 <!--body container-->
     <div class="container">
+    <h1>Calendar</h1>
       <div class="row">
         <!--calendar plugin-->
         <div class="col-md-10">
@@ -80,7 +83,9 @@
       </div>
       <br/>
 
+<!--add php foreach that allows each pane to be created for every instance of a task in the database-->
         <!--tile row-->
+      <h1>Task List</h1>
       <div class="row">
         <div class="col-md-12">
           <!--panel #1-->
