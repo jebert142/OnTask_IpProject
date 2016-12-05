@@ -1,6 +1,11 @@
-<!--the current php code turns the user back to index even with the right credentials-->
-<!--Made by Jonathan Ebert-->
+<?php
+  session_start();
 
+  //bandaid fix to keep user from manually typing in addresses
+  if($_SESSION['username'] == ""){
+    header("Location: index.php?You must login!");
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
