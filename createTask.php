@@ -1,38 +1,8 @@
 <?php
-  
   session_start();
   if($_SESSION['username'] == ""){
     header("Location: index.php?You must login!");
   }
-
-  //Going to call the database to display item based on id given
- // $id = $_GET['id'];
-  $id = 2;
-  $mysql_access = mysql_connect(localhost, 'group4', 'onTask2016');
-  
-  if(!$mysql_access)
-  {
-    die('Could not connect: ' . mysql_error());
-  }
-
-  mysql_select_db('group4');
-
-  $query = "SELECT * FROM Tasks where task_id = " . $id;
-
-  $result = mysql_query($query, $mysql_access);
-  
-  $row = mysql_fetch_row($result);  
-
-    $id = $row[0];
-    $title = $row[1];
-    $start = $row[2];
-    $end = $row[3];
-    $difficulty = $row[4];
-    $descrip = $row[5];
-
-
-  mysql_close($mysql_access);
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -79,21 +49,21 @@
 <br>
 <br>
 <!-- FORM -->
-<form class="form-horizontal" action="modifyTaskProcess.php" method='post'>
+<form class="form-horizontal" action="createTaskProcess.php" method='post'>
   <fieldset>
     <legend>Create Task</legend>
     <!--Title-->
     <div class="form-group">
       <label for="inputTitle" class="col-lg-2 control-label">Title</label>
       <div class="col-md-6">
-        <input type="text" class="form-control" id="inputTitle"> <?php echo $title; ?>
+        <input type="text" class="form-control" id="inputTitle" placeholder="Title">
       </div>
     </div>
     <!--Description-->
     <div class="form-group">
       <label for="descrip" class="col-lg-2 control-label">Description</label>
       <div class="col-md-6">
-        <textarea class="form-control" rows="3" id="descrip"><?php echo $descrip; ?></textarea>
+        <textarea class="form-control" rows="3" id="descrip"></textarea>
         <span class="help-block">Enter details about your task here.</span>
       </div>
     </div>
@@ -101,7 +71,7 @@
     <div class="form-group">
       <label for="startDate" class="col-lg-2 control-label">Due Date</label>
       <div class="col-md-6">
-        <input type="text" class="form-control" id="startDate" placeholder="<?php echo $start; ?>">
+        <input type="text" class="form-control" id="startDate" placeholder="Due Date">
       </div>
     </div>
     <!--Difficuty-->
