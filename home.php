@@ -1,3 +1,11 @@
+<?php
+  session_start();
+
+  //bandaid fix to keep user from manually typing in addresses
+  if($_SESSION['username'] == ""){
+    header("Location: index.php?You must login!");
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
