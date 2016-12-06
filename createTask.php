@@ -39,7 +39,7 @@
         </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="yourAccount/yourAccountHome.php"><?php echo $username;?>'s Account</a></li>
-            <li><a href="../index.php" class="btn btn-success" style="padding-top: 11px;padding-bottom: 11px;">Sign Out</a></li>
+            <li><a href="signout.php" class="btn btn-success" style="padding-top: 11px;padding-bottom: 11px;">Sign Out</a></li>
           </ul>
         </div>
       </div>
