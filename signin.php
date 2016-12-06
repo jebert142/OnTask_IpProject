@@ -25,7 +25,7 @@
 
  	    mysql_select_db('group4');
 
-  		$query = "SELECT * FROM Users where email = " . $correctEmail;
+  		$query = "SELECT * FROM Users WHERE user_id = " . "0";
 
 	    $result = mysql_query($query, $mysql_access);
   
@@ -39,7 +39,7 @@
     	
 
 
- 		 mysql_close($mysql_access);
+ 		mysql_close($mysql_access);
 		
  		$_SESSION['experience'] = $experience;
  		$_SESSION['email'] = $email;

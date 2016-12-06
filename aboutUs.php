@@ -1,12 +1,15 @@
-<!--Made by Jonathan Ebert-->
+<?php
+  session_start();
 
+  //bandaid fix to keep user from manually typing in addresses
+  if($_SESSION['username'] == ""){
+    header("Location: index.php");
+  }
+  $username = $_SESSION['username'];
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <?php 
-  	#some php code
-  ?>
-    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
@@ -34,7 +37,7 @@
           <li><a href="yourAccount/yourAccountHome.php">Account</a></li>
         </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="yourAccount/yourAccountHome.php"><?php echo $username?>'s Account</a></li>
+            <li><a href="yourAccount/yourAccountHome.php"><?php echo $username;?>'s Account</a></li>
             <li><a href="../index.php" class="btn btn-success" style="padding-top: 11px;padding-bottom: 11px;">Sign Out</a></li>
           </ul>
         </div><!--/.navbar-collapse -->

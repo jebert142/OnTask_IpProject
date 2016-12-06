@@ -1,11 +1,12 @@
-<!--Made by Jonathan Ebert-->
-
+<?php session_start();
+  if($_SESSION['username'] == ""){header("Location: index.php");}
+  $username = $_SESSION['username'];?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <title>Tasks</title>
@@ -40,7 +41,7 @@
         </ul>
 
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="../yourAccount/yourAccountHome.php"><?php echo $username?>'s Account</a></li>
+            <li><a href="../yourAccount/yourAccountHome.php"><?php echo $username;?>'s Account</a></li>
 
             <li><a href="../index.php" class="btn btn-success" style="padding-top: 11px;padding-bottom: 11px;">Sign Out</a></li>
           </ul>
@@ -159,8 +160,9 @@
       </footer>
     </div>
 
-    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Placed at the end of the document so the pages load faster 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    -->
   </body>
 </html>
