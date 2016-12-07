@@ -1,10 +1,19 @@
 <?php
-		$id = $_POST['id'];
-		$title = $_POST['title'];
-		$start = $_POST['start'];
-		$end = $_POST['end'];
-		$difficulty = $_POST['difficulty'];
+		session_start();
+		$id = $_SESSION['id'];
+		$userEmail = $_SESSION['email'];
+		$title = $_POST['inputTitle'];
+		$date = $_POST['startDate'];
 		$descrip = $_POST['descrip'];
+		$difficulty = $_POST['difficulty'];
+		
+//--------FIX DATE FORMATTING UGH MM/DD/YYYY into y-m-d
+		$formatDate = explode("/", $date);
+		$month = $formatDate[0];
+		$day = $formatDate[1];
+		$year = $formatDate[2];
+
+		$start = $year . "-" . $month . "-" . $day;
 
 		$mysql_access = mysql_connect(localhost, 'group4', 'onTask2016');
 	
@@ -14,13 +23,13 @@
 		}
 
 		mysql_select_db('group4');
-
-		$query = "UPDATE Tasks set title='$title', start='$start', end='$end',  ";
-		$query = $query . "difficulty='$difficulty', description='$descrip' WHERE task_id = " . $id;
+//echo "ex input: $id, $userEmail, $title, $start, $descrip, $difficulty";
+		$query = "UPDATE Task set title='$title', start='$start',  ";
+		$query = $query . "description='$descrip', difficulty='$difficulty' WHERE taskId = " . $id;
 
 		$result = mysql_query($query, $mysql_access);
 
 		mysql_close($mysql_access);
 
-		header('Location: index.php');
+		header('Location: yourSchedule/tasksHome.php');
 ?>

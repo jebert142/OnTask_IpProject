@@ -61,14 +61,14 @@
     <div class="form-group">
       <label for="inputTitle" class="col-lg-2 control-label">Title</label>
       <div class="col-md-6">
-        <input type="text" class="form-control" id="inputTitle" placeholder="Title">
+        <input type="text" class="form-control" id="inputTitle" name="inputTitle" placeholder="Title">
       </div>
     </div>
     <!--Description-->
     <div class="form-group">
       <label for="descrip" class="col-lg-2 control-label">Description</label>
       <div class="col-md-6">
-        <textarea class="form-control" rows="3" id="descrip"></textarea>
+        <textarea class="form-control" rows="3" id="descrip" name="descrip"></textarea>
         <span class="help-block">Enter details about your task here.</span>
       </div>
     </div>
@@ -76,14 +76,14 @@
     <div class="form-group">
       <label for="startDate" class="col-lg-2 control-label">Due Date</label>
       <div class="col-md-6">
-        <input type="text" class="form-control" id="startDate" placeholder="Due Date">
+        <input type="text" class="form-control" id="startDate" name="startDate" placeholder="Due Date">
       </div>
     </div>
     <!--Difficuty-->
     <div class="form-group">
       <label for="select" class="col-lg-2 control-label">Difficulty</label>
       <div class="col-md-6">
-        <select class="form-control" id="difficulty">
+        <select class="form-control" id="difficulty" name="difficulty">
           <option>1</option>
           <option>2</option>
           <option>3</option>
@@ -96,7 +96,7 @@
     <!--Buttons-->
     <div class="form-group">
       <div class="col-lg-10 col-lg-offset-2">
-        <button type="reset" class="btn btn-default">Cancel</button>
+        <button type="reset" onclick="location.href='yourSchedule/tasksHome.php';" class="btn btn-default">Cancel</button>
         <button type="submit" class="btn btn-primary">Create</button>
       </div>
     </div>

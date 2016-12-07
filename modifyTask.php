@@ -5,10 +5,14 @@
     header("Location: index.php");
   }
   $username = $_SESSION['username'];
+  $email = $_SESSION['email'];
 
   //Going to call the database to display item based on id given
- // $id = $_GET['id'];
-  $id = 2;
+ // $id = $_POST['id'];
+  $id = 0;
+  
+  $_SESSION['id'] = $id;
+
   $mysql_access = mysql_connect(localhost, 'group4', 'onTask2016');
   
   if(!$mysql_access)
@@ -18,18 +22,19 @@
 
   mysql_select_db('group4');
 
-  $query = "SELECT * FROM Tasks where task_id = " . $id;
+// GET THE TASK INFO HERE
+  $query = "SELECT * FROM Task where taskId = " . $id;
 
   $result = mysql_query($query, $mysql_access);
   
   $row = mysql_fetch_row($result);  
 
-    $id = $row[0];
-    $title = $row[1];
-    $start = $row[2];
-    $end = $row[3];
-    $difficulty = $row[4];
-    $descrip = $row[5];
+    $tempid = $row[0];
+    $tempuserEmail = $row[1];
+    $title = $row[2];
+    $start = $row[3];
+    $descrip = $row[4];
+    $difficulty = $row[5];
 
 
   mysql_close($mysql_access);
@@ -93,14 +98,14 @@
           <div class="form-group">
             <label for="inputTitle" class="col-lg-2 control-label">Title</label>
             <div class="col-md-6">
-              <input type="text" class="form-control" id="inputTitle" placeholder="<?php echo $title; ?>"> 
+              <input type="text" class="form-control" id="inputTitle" name="inputTitle" placeholder="<?php echo $title; ?>"> 
             </div>
           </div>
           <!--Description-->
           <div class="form-group">
             <label for="descrip" class="col-lg-2 control-label">Description</label>
             <div class="col-md-6">
-              <textarea class="form-control" rows="3" id="descrip"><?php echo $descrip; ?></textarea>
+              <textarea class="form-control" rows="3" id="descrip" name="descrip"><?php echo $descrip; ?></textarea>
               <span class="help-block">Enter details about your task here.</span>
             </div>
           </div>
@@ -109,14 +114,14 @@
     <div class="form-group">
       <label for="startDate" class="col-lg-2 control-label">Due Date</label>
       <div class="col-md-6">
-        <input type="text" class="form-control" id="startDate" placeholder="Due Date">
+        <input type="text" class="form-control" id="startDate" name="startDate" placeholder="Due Date">
       </div>
     </div>
           <!--Difficuty-->
           <div class="form-group">
             <label for="select" class="col-lg-2 control-label">Difficulty</label>
             <div class="col-md-6">
-              <select class="form-control" id="difficulty">
+              <select class="form-control" id="difficulty" name="difficulty">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -129,8 +134,8 @@
           <!--Buttons-->
           <div class="form-group">
             <div class="col-lg-10 col-lg-offset-2">
-              <button type="reset" class="btn btn-default">Cancel</button>
-              <button type="submit" class="btn btn-primary">Create</button>
+              <button type="reset" onclick="location.href='yourSchedule/tasksHome.php';" class="btn btn-default">Cancel</button>
+              <button type="submit" class="btn btn-primary">Save</button>
             </div>
           </div>
         </fieldset>
