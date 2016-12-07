@@ -131,7 +131,7 @@
       <h1>Task List</h1>
       <div class="row">
         <div class="col-md-12">
-          <!--panel #1
+          panel #1
           <div class="col-sm-3">
             <div class="panel panel-warning">
               <div class="panel-heading">
@@ -164,6 +164,8 @@
       $start = $row[3];
       $descrip = $row[4];
       $difficulty = $row[5];
+ 
+      
 
           //<!--panel #2-->
    echo      " <div class='col-sm-3'>";
@@ -178,11 +180,13 @@
    echo             "Due: $start";
    echo             "<br/>";
    echo             "<br/>";
-   echo             "<a class='btn btn-primary btn-xs' href='../modifyTask.php' role='button'>Modify Task &raquo;</a>";
+   echo             "<a class='btn btn-primary btn-xs' href='../modifyTask.php' role='button'>Modify Task &raquo;</a>&nbsp<a class='btn btn-warning btn-xs' href='../complete.php' role='button' value='tempid'>Complete Task &raquo;</a>";
    echo           "</div>";
    echo         "</div>";
    echo       "</div>";
     }//end for loop
+
+
     mysql_close($mysql_access);
 ?>
           <!--panel #3
@@ -212,6 +216,7 @@
       </div>
 -->
     <!--progress bar-->
+
     <div class="container">
     <br/>
       <div class="row">

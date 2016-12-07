@@ -57,14 +57,19 @@
 
       <!--more info on the main body div-->
       <div class="row">
-        <div class="col-md-10">
+        <div class="col-md-7">
           <h1>What Can You Do With OnTask?</h1>
           <ul type="square">
           &nbsp &nbsp &nbsp &nbsp<li>Maintain your task list/calendar and earn experience points for your hard work.</li>
           &nbsp &nbsp &nbsp &nbsp<li>Create and update your task list anytime</li>
           &nbsp &nbsp &nbsp &nbsp<li style="color:#808080">Use our mobile app to view, edit, and update your tasks. <i style="color:red"><b>Coming Soon!</b></i></li>
           </ul>
-        </div>        
+        </div> 
+
+        <!--logo for website-->
+        <div class="col-md-3">
+          <img src="onTaskIcon.png" style="width:229px;height:237px;"">
+        </div>       
       </div>
 
     <!--Warning message at the bottom of the main body-->
