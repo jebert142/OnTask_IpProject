@@ -68,7 +68,7 @@
 
         <!--logo for website-->
         <div class="col-md-3">
-          <img src="onTaskIcon.png" style="width:229px;height:237px;"">
+          <img src="onTaskIcon.png" style="width:229px;height:237px;">
         </div>       
       </div>
 

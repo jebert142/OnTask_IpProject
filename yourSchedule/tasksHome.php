@@ -98,9 +98,11 @@
     <h1>Calendar</h1>
       <div class="row">
         <!--calendar plugin-->
-        <div class="col-md-10">
+        <div class="col-md-10 offset-md-2">
             <div class="calendar"></div>
-                    <script type="text/template" id="calendar-template">
+            <img src="../whatTheCalendarShouldLookLike.jpg" style="width:883px;height:621px;">
+                   <!--Calendar plugin that does not work yet-->
+                   <!-- <script type="text/template" id="calendar-template">
                         <div class="clndr-controls">
                           <div class="clndr-previous-button">&lsaquo;</div>
                           <div class="month"><%= month %></div>
@@ -119,7 +121,7 @@
                                 </div>
                             </div>
                         </div>
-                    </script>
+                    </script>-->
         </div>
       </div>
     
