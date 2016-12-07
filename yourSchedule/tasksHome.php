@@ -1,6 +1,8 @@
 <?php session_start();
   if($_SESSION['username'] == ""){header("Location: index.php");}
-  $username = $_SESSION['username'];?>
+  $username = $_SESSION['username'];
+  $email = $_SESSION['email'];
+  ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -125,11 +127,11 @@
     <br/>
 
 <!--add php foreach that allows each pane to be created for every instance of a task in the database-->
-        <!--tile row-->
+        <!--tile row
       <h1>Task List</h1>
       <div class="row">
         <div class="col-md-12">
-          <!--panel #1-->
+          <!--panel #1
           <div class="col-sm-3">
             <div class="panel panel-warning">
               <div class="panel-heading">
@@ -140,28 +142,50 @@
               </div>
             </div>
           </div>
+-->
+<?php
+    $mysql_access = mysql_connect(localhost, 'group4', 'onTask2016');
+  
+    if(!$mysql_access)
+    {
+      die('Could not connect: ' . mysql_error());
+    }
 
-          <!--panel #2-->
-          <div class="col-sm-3">
-            <div class="panel panel-warning">
-              <div class="panel-heading">
-                <h3 class="panel-title"><strong>2. Finish Stat Presentation Prep</strong></h3>
-              </div>
-              <div class="panel-body">
-                Complete and review the project presentation for Statistics.
-                <br/>
-                <br/>
-                <!--
-                  HERE'S THE BUTTON
-                  HERE'S THE BUTTON
-                  HERE'S THE BUTTON
-                  HERE'S THE BUTTON-->
-                <a class="btn btn-primary btn-xs" href="../modifyTask.php" role="button">Modify Task &raquo;</a>
-              </div>
-            </div>
-          </div>
+    mysql_select_db('group4');
 
-          <!--panel #3-->
+    $query = "SELECT * FROM Task WHERE userEmail = '$email'";
+    $result = mysql_query($query, $mysql_access);
+    $i=0;
+    while($row = mysql_fetch_row($result)){
+      $i++;
+      $tempid = $row[0];
+      $tempuserEmail = $row[1];
+      $title = $row[2];
+      $start = $row[3];
+      $descrip = $row[4];
+      $difficulty = $row[5];
+
+          //<!--panel #2-->
+   echo      " <div class='col-sm-3'>";
+   echo         "<div class='panel panel-warning'>";
+   echo           "<div class='panel-heading'>";
+   echo             "<h3 class='panel-title'><strong> $i. $title</strong></h3>";
+   echo           "</div>";
+   echo           "<div class='panel-body'>";
+   echo                 "$descrip";
+   echo             "<br/>";
+   echo             "<br/>";
+   echo             "Due: $start";
+   echo             "<br/>";
+   echo             "<br/>";
+   echo             "<a class='btn btn-primary btn-xs' href='../modifyTask.php' role='button'>Modify Task &raquo;</a>";
+   echo           "</div>";
+   echo         "</div>";
+   echo       "</div>";
+    }//end for loop
+    mysql_close($mysql_access);
+?>
+          <!--panel #3
           <div class="col-sm-3">
             <div class="panel panel-warning">
               <div class="panel-heading">
@@ -173,7 +197,7 @@
             </div>
           </div>
 
-          <!--panel #4-->
+          <!--panel #4
           <div class="col-sm-3">
             <div class="panel panel-warning">
               <div class="panel-heading">
@@ -186,7 +210,7 @@
           </div>
         </div>
       </div>
-
+-->
     <!--progress bar-->
     <div class="container">
     <br/>
