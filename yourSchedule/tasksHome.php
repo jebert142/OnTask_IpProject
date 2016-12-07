@@ -166,8 +166,6 @@
       $start = $row[3];
       $descrip = $row[4];
       $difficulty = $row[5];
- 
-      
 
           //<!--panel #2-->
    echo      " <div class='col-sm-3'>";

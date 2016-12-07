@@ -51,17 +51,6 @@
       </div>
     </div>
 
-    <div class="container">
-    	<div class="row">
-	    	<div class="col-md-5">
-	    	<!--warning message because this page doesn't work yet-->
-				<div class="alert alert-dismissible alert-danger">
-				  <strong>Oh snap!</strong> It looks like this form doesn't work yet. Hang on tight and we'll get that fixed.
-				</div>
-			</div>
-		</div>
-	</div>
-
     <!--main body-->
     <div class="container">
     	<div class="row">
@@ -101,6 +90,18 @@
 				</form>
     		</div>
     	</div>
+    </div>
+
+    <div class="container">
+    <br/>
+      <div class="row">
+        <div class="col-md-5 col-md-offset-1">
+        <!--warning message because this page doesn't work yet-->
+        <div class="alert alert-dismissible alert-danger">
+          <strong>Oh snap!</strong> It looks like this form doesn't work yet. Hang on tight and we'll get that fixed.
+        </div>
+      </div>
+    </div>
     </div>
 
     <div class="container">

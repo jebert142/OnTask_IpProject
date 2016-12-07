@@ -99,6 +99,10 @@
               <!--reference #4-->
               <p><b>CLNDR Plug-In</b>: <a href="http://kylestetz.github.io/CLNDR/">http://kylestetz.github.io/CLNDR/</a></p>
               <br/>
+
+              <!--reference #5-->
+              <p><b>Underscore.js</b>: <a href="http://underscorejs.org/">http://underscorejs.org/</a></p>
+              <br/>
             </div>            
           </div>
         </div>

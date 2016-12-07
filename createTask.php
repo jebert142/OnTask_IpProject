@@ -54,54 +54,60 @@
     </div>
 
 <!-- FORM -->
-<form class="form-horizontal" action="createTaskProcess.php" method='post'>
-  <fieldset>
-    <legend></legend>
-    <!--Title-->
-    <div class="form-group">
-      <label for="inputTitle" class="col-lg-2 control-label">Title</label>
-      <div class="col-md-6">
-        <input type="text" class="form-control" id="inputTitle" name="inputTitle" placeholder="Title">
-      </div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+    <form class="form-horizontal" action="createTaskProcess.php" method='post'>
+      <fieldset>
+        <!--Title-->
+        <div class="form-group">
+          <label for="inputTitle" class="col-lg-2 control-label">Title</label>
+          <div class="col-md-6">
+            <input type="text" class="form-control" id="inputTitle" name="inputTitle" placeholder="Title">
+          </div>
+        </div>
+        <!--Description-->
+        <div class="form-group">
+          <label for="descrip" class="col-lg-2 control-label">Description</label>
+          <div class="col-md-6">
+            <textarea class="form-control" rows="3" id="descrip" name="descrip"></textarea>
+            <span class="help-block">Enter details about your task here.</span>
+          </div>
+        </div>
+        <!-- Start Date-->
+        <div class="form-group">
+          <label for="startDate" class="col-lg-2 control-label">Due Date</label>
+          <div class="col-md-6">
+            <input type="text" class="form-control" id="startDate" name="startDate" placeholder="Due Date">
+          </div>
+        </div>
+        <!--Difficuty-->
+        <div class="form-group">
+          <label for="select" class="col-lg-2 control-label">Difficulty</label>
+          <div class="col-md-6">
+            <select class="form-control" id="difficulty" name="difficulty">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+            <br>
+          </div>
+        </div>
+        <!--Buttons-->
+        <div class="form-group">
+          <div class="col-lg-10 col-lg-offset-2">
+            <button type="reset" onclick="location.href='yourSchedule/tasksHome.php';" class="btn btn-default">Cancel</button>
+            <button type="submit" class="btn btn-primary">Create</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
     </div>
-    <!--Description-->
-    <div class="form-group">
-      <label for="descrip" class="col-lg-2 control-label">Description</label>
-      <div class="col-md-6">
-        <textarea class="form-control" rows="3" id="descrip" name="descrip"></textarea>
-        <span class="help-block">Enter details about your task here.</span>
-      </div>
-    </div>
-    <!-- Start Date-->
-    <div class="form-group">
-      <label for="startDate" class="col-lg-2 control-label">Due Date</label>
-      <div class="col-md-6">
-        <input type="text" class="form-control" id="startDate" name="startDate" placeholder="Due Date">
-      </div>
-    </div>
-    <!--Difficuty-->
-    <div class="form-group">
-      <label for="select" class="col-lg-2 control-label">Difficulty</label>
-      <div class="col-md-6">
-        <select class="form-control" id="difficulty" name="difficulty">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
-        <br>
-      </div>
-    </div>
-    <!--Buttons-->
-    <div class="form-group">
-      <div class="col-lg-10 col-lg-offset-2">
-        <button type="reset" onclick="location.href='yourSchedule/tasksHome.php';" class="btn btn-default">Cancel</button>
-        <button type="submit" class="btn btn-primary">Create</button>
-      </div>
-    </div>
-  </fieldset>
-</form>
+  </div>
+</div>
+
   <!--footer-->
     <div class="container">
       <hr>
