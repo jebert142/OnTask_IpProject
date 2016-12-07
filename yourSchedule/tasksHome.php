@@ -98,7 +98,7 @@
     <h1>Calendar</h1>
       <div class="row">
         <!--calendar plugin-->
-        <div class="col-md-10 offset-md-2">
+        <div class="col-md-10 col-md-offset-1">
             <div class="calendar"></div>
             <img src="../whatTheCalendarShouldLookLike.jpg" style="width:883px;height:621px;">
                    <!--Calendar plugin that does not work yet-->
@@ -221,8 +221,9 @@
 
     <div class="container">
     <br/>
-      <div class="row">
+      <div class="row"><br/>
       <h2>This Week's Progress</h2>
+      
         <div class="progress progress-striped col-lg-12">
           <div class="progress-bar progress-bar-success" style="width: 60%"></div>
         </div>
