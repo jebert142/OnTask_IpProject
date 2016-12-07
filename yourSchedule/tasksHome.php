@@ -20,11 +20,43 @@
     <!--JQuery-->
     <script type="text/javascript" src="../Resources/jquery-3.1.1.slim.min.js"></script>
 
+    <!--underscore.js-->
+    <script type="text/javascript" src="../Resources/underscore.js"></script>
+
     <!--CLNDR-->
     <script type="text/javascript" src="../Resources/clndr.min.js"></script>
 
     <!--For a Tab Icon-->
     <link rel="icon" href="../Styles/favicon.ico">
+<script type="text/javascript">
+    var currentMonth = moment().format('YYYY-MM');
+    var nextMonth    = moment().add(1,'month').format('YYYY-MM');
+
+    $('#calendar').clndr();
+    $('#calendar').clndr({
+      template: $('#calendar-template').html()
+    });
+
+    $('#calendar').clndr({
+      template: $('#calendar-template').html(),
+      events: [
+        { date: '2013-09-09', title: 'CLNDR GitHub Page Finished', url: 'http://github.com/kylestetz/CLNDR' }
+      ],
+      clickEvents: {
+        click: function(target) {
+          console.log(target);
+        },
+        onMonthChange: function(month) {
+          console.log('you just went to ' + month.format('MMMM, YYYY'));
+        }
+      },
+      doneRendering: function() {
+        console.log('this would be a fine place to attach custom event handlers.');
+      }
+    });
+
+</script>
+
   </head>
 
   <body>
@@ -53,10 +85,9 @@
     <div class="jumbotron">
       <div class="container">
         <h1  style="text-decoration:none">Your Tasks</h1>
-        <p  style="text-decoration:none">Below, you'll find your current tasks this month and your upcoming tasks on those tiles to the right</p>.
+        <p  style="text-decoration:none">Below, you'll find your current tasks this month and your upcoming tasks on those tiles to the right</p>
         <!--buttons for create and modify tasks-->
-        <p><a class="btn btn-success" href="../createTask.php" role="button">Create Task &raquo;</a>
-        <a class="btn btn-primary" href="../modifyTask.php" role="button">Modify Task &raquo;</a></p>
+        <p><a class="btn btn-success" href="../createTask.php" role="button">Create Task &raquo;</a></p>
       </div>
     </div>
 
@@ -66,26 +97,32 @@
       <div class="row">
         <!--calendar plugin-->
         <div class="col-md-10">
-            <div class="clndr-controls">
-                <div class="clndr-previous-button">&lsaquo;</div>
-                <div class="month"><%= month %></div>
-                <div class="clndr-next-button">&rsaquo;</div>
-            </div>
-            <div class="clndr-grid">
-                <div class="days-of-the-week">
-                <% _.each(daysOfTheWeek, function (day) { %>
-                    <div class="header-day"><%= day %></div>
-                <% }); %>
-                    <div class="days">
-                    <% _.each(days, function (day) { %>
-                        <div class="<%= day.classes %>"><%= day.day %></div>
-                    <% }); %>
-                    </div>
-                </div>
-            </div>
+            <div class="calendar"></div>
+                    <script type="text/template" id="calendar-template">
+                        <div class="clndr-controls">
+                          <div class="clndr-previous-button">&lsaquo;</div>
+                          <div class="month"><%= month %></div>
+                          <div class="clndr-next-button">&rsaquo;</div>
+                        </div>
+
+                        <div class="clndr-grid">
+                            <div class="days-of-the-week">
+                            $<% _.each(daysOfTheWeek, function (day) { %>
+                                <div class="header-day"><%= day %></div>
+                            <% }); %>
+                                <div class="days">
+                                <% _.each(days, function (day) { %>
+                                    <div class="<%= day.classes %>"><%= day.day %></div>
+                                <% }); %>
+                                </div>
+                            </div>
+                        </div>
+                    </script>
         </div>
       </div>
-      <br/>
+    
+
+    <br/>
 
 <!--add php foreach that allows each pane to be created for every instance of a task in the database-->
         <!--tile row-->
@@ -112,6 +149,14 @@
               </div>
               <div class="panel-body">
                 Complete and review the project presentation for Statistics.
+                <br/>
+                <br/>
+                <!--
+                  HERE'S THE BUTTON
+                  HERE'S THE BUTTON
+                  HERE'S THE BUTTON
+                  HERE'S THE BUTTON-->
+                <a class="btn btn-primary btn-xs" href="../modifyTask.php" role="button">Modify Task &raquo;</a>
               </div>
             </div>
           </div>

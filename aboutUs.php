@@ -34,7 +34,6 @@
         <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
           <li><a href="yourSchedule/tasksHome.php">Tasks</a></li>
-          <li><a href="yourAccount/yourAccountHome.php">Account</a></li>
         </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="yourAccount/yourAccountHome.php"><?php echo $username;?>'s Account</a></li>
@@ -69,6 +68,11 @@
           <p>Senior at UNF: Studying Information Systems</p>
           <p>Founder of OnTask</p>
           <img src="Jon_Profile1.png" alt="Jonathan Ebert" style="width:300px;height:300px;">
+        </div>
+        <div class="col-md-4">
+          <h2>Jonathan Jordan</h4>
+          <p>Co-Founder of OnTask</p>
+          <img src="JonJordanPic.jpg" alt="Jonathan Jordan" style="width:250px;height:375px;">
         </div>
       </div>
 <br/>
