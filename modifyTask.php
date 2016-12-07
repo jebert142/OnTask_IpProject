@@ -9,9 +9,9 @@
 
   //Going to call the database to display item based on id given
  // $id = $_POST['id'];
-  $id = 0;
   
-  $_SESSION['id'] = $id;
+  
+  $id = $_SESSION['id'];
 
   $mysql_access = mysql_connect(localhost, 'group4', 'onTask2016');
   

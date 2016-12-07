@@ -167,6 +167,7 @@
       $descrip = $row[4];
       $difficulty = $row[5];
 
+      $_SESSION['id'] = $tempid;
           //<!--panel #2-->
    echo      " <div class='col-sm-3'>";
    echo         "<div class='panel panel-warning'>";
